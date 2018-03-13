@@ -1,0 +1,8 @@
+all: ftserver
+
+ftserver: ftserver.o
+	gcc ftserver.o -o ftserver 
+ftserver.o: ftserver.c ftserver.h
+	gcc -c ftserver.c
+clean:
+	rm -rf *o ftserver

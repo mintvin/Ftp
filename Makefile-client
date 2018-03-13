@@ -1,0 +1,8 @@
+all: ftclient
+
+ftclient: ftclient.o
+	gcc ftclient.o -o ftclient 
+ftclient.o: ftclient.c ftclient.h
+	gcc -c ftclient.c
+clean:
+	rm -rf *o ftclient
